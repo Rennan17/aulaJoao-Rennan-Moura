@@ -31,7 +31,7 @@ const Pokemon = () => {
           margin: 15,
           borderRadius: 5,
         }}
-        defaultValue="Digite aquiiii!"
+        defaultValue="Digite aquiiii!" 
       />
     </ScrollView>
   );  
