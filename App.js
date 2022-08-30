@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import react from "react";
+import { View, Text, Image, Scrollview, TextInput, ScrollView } from "react-native";
+import gengarImg from './assets/img/gengar.jpg';
 
-export default function App() {
+const Pokemon = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <ScrollView>
+      <View>
+        <Text
+          style={{
+            fontSize: 45,
+            alignSelf: "center",
+            color:"purple",
+          }}
+        >
+          Gengar da Fúria
+        </Text>
+        <Image
+          source={{
+            uri: gengarImg,
+          }}
+          style={{ width: 200, height: 210, alignSelf: "center" }}
+        />
+      </View>
+      <TextInput
+        style={{
+          height: 40,
+          borderColor: 'purple' ,
+          borderWidth: 1,
+          padding: 5,
+          margin: 15,
+          borderRadius: 5,
+        }}
+        defaultValue="Digite aquiiii!"
+      />
+    </ScrollView>
+  );  
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  export default Pokemon;
